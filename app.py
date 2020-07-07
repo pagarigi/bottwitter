@@ -2,7 +2,7 @@ from twitter import Twitter
 import time
 from media import Media
 
-#deploy heroku
+#test pancing ke heroku supaya keluar dyno
 
 tw = Twitter()
 media = Media()
