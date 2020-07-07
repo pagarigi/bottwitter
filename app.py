@@ -3,6 +3,7 @@ import time
 from media import Media
 
 #deploy heroku
+#test kedua pancing worker supaya muncul...
 
 tw = Twitter()
 media = Media()
