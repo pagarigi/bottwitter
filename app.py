@@ -1,5 +1,6 @@
 from twitter import Twitter
 import time
+import sys
 from media import Media
 
 #deploy heroku
@@ -11,14 +12,14 @@ def start():
     print("Starting...")
     dms = list()
     while True:
-        if len(dms) is not 0:
+        if len(dms) != 0:
             print(len(dms))
             for i in range(len(dms)):
                 message = dms[i]['message']
                 sender_id = dms[i]['sender_id']
                 id = dms[i]['id']
 
-                if len(message) is not 0 and len(message) <= 500:
+                if len(message) != 0 and len(message) <= 500:
                     if "https://" not in message and "http://" not in message:
                         if "By" in message:
                             message = message.replace("By", "")
@@ -39,7 +40,8 @@ def start():
         else:
             print("DM is empty")
             dms = tw.read_dm()
-            if len(dms) is 0:
+            print(dms)
+            if len(dms) == 0:
                 time.sleep(60)
 
 if __name__ == "__main__":
