@@ -26,7 +26,7 @@ def start():
                             screen_name = tw.get_user_screen_name(sender_id)
                             media.download_image()
                             media.process_image(message, screen_name)
-                            tw.post_tweet(message)
+                            tw.post_tweet()
                             tw.delete_dm(id)
                         else:
                             media.download_image()
