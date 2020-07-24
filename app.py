@@ -26,7 +26,7 @@ def start():
                             screen_name = tw.get_user_screen_name(sender_id)
                             #media.download_image()
                             #media.process_image(message, screen_name)
-                            tw.post_tweet()
+                            tw.post_tweet(message)
                             tw.delete_dm(id)
                         else:
                             #media.download_image()
@@ -42,7 +42,7 @@ def start():
             dms = tw.read_dm()
             print(dms)
             if len(dms) == 0:
-                time.sleep(60)
+                time.sleep(10)
 
 if __name__ == "__main__":
     start()
