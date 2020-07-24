@@ -1,13 +1,13 @@
 from twitter import Twitter
 import time
 import sys
-from media import Media
+#from media import Media
 
 #deploy heroku
 #test kedua pancing worker supaya muncul...
 
 tw = Twitter()
-media = Media()
+#media = Media()
 def start():
     print("Starting...")
     dms = list()
@@ -24,13 +24,13 @@ def start():
                         if "By" in message:
                             message = message.replace("By", "")
                             screen_name = tw.get_user_screen_name(sender_id)
-                            media.download_image()
-                            media.process_image(message, screen_name)
+                            #media.download_image()
+                            #media.process_image(message, screen_name)
                             tw.post_tweet()
                             tw.delete_dm(id)
                         else:
-                            media.download_image()
-                            media.process_image(message, None)
+                            #media.download_image()
+                            #media.process_image(message, None)
                             tw.post_tweet()
                             tw.delete_dm(id)
                     else:
