@@ -1,2 +1,2 @@
 worgitker: python app.py
-web gunicorm app:app
+web gunicorn app:app
