@@ -47,7 +47,7 @@ class Twitter :
     def post_tweet(self, message):
         print("Uploading..")
         api = self.init_tweepy()
-        api.update_with_media("/ready.png")
+        #api.update_with_media(filename="ready.png")
         api.update_status(message)
 
     def get_user_screen_name(self, id):
