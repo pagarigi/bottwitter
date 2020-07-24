@@ -7,6 +7,7 @@ class Media:
         print("Initialize media..")
 
     def download_image(self):
+        url = 'https://picsum.photos/720/1280/?random'
         r = requests.get(url = url)
         with open("downloaded_bg.png", 'wb') as f:
             f.write(r.content)

@@ -44,11 +44,11 @@ class Twitter :
             time.sleep(60)
             pass
 
-    def post_tweet(self, message):
+    def post_tweet(self):
         print("Uploading..")
         api = self.init_tweepy()
-        #api.update_with_media(filename="ready.png")
-        api.update_status(message)
+        api.update_with_media(filename="ready.png")
+        #api.update_status(message)
 
     def get_user_screen_name(self, id):
         print("Getting username")
